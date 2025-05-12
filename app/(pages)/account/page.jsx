@@ -1,11 +1,5 @@
 'use client';
-  // Function to update URL with tab parameter
-  const updateActiveTab = (tab) => {
-    setActiveTab(tab);
-    const url = new URL(window.location.href);
-    url.searchParams.set('tab', tab);
-    window.history.pushState({}, '', url);
-  };
+
 
   const BASE_URL = 'https://natours-yslc.onrender.com';
 
@@ -41,6 +35,14 @@ import {
   ChevronRight,
   Star
 } from 'lucide-react';
+
+  // Function to update URL with tab parameter
+  const updateActiveTab = (tab) => {
+    setActiveTab(tab);
+    const url = new URL(window.location.href);
+    url.searchParams.set('tab', tab);
+    window.history.pushState({}, '', url);
+  };
 
 export default function AccountPage() {
   const { user, isAuthenticated, loading, logout } = useAuth();
