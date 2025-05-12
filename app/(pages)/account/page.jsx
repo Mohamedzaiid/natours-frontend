@@ -42,7 +42,7 @@ import {
   };
 
   const BASE_URL = 'https://natours-yslc.onrender.com';
-
+export const dynamic = 'force-dynamic';
 export default function AccountPage() {
   const { user, isAuthenticated, loading, logout } = useAuth();
   const { wishlistItems, removeFromWishlist } = useWishlist();
