@@ -1,4 +1,5 @@
 'use client';
+export const dynamic = 'force-dynamic';
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -41,8 +42,7 @@ import {
     window.history.pushState({}, '', url);
   };
 
-  const BASE_URL = 'https://natours-yslc.onrender.com';
-export const dynamic = 'force-dynamic';
+const BASE_URL = 'https://natours-yslc.onrender.com';
 export default function AccountPage() {
   const { user, isAuthenticated, loading, logout } = useAuth();
   const { wishlistItems, removeFromWishlist } = useWishlist();

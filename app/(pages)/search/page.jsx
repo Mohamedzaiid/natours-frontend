@@ -1,5 +1,5 @@
 "use client";
-
+export const dynamic = 'force-dynamic';
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { getAllTours } from "@/lib/api/tours";
@@ -11,7 +11,9 @@ import {
   Star
 } from "lucide-react";
 import WishlistButton from "@/app/components/ui/wishlist/WishlistButton";
-export const dynamic = 'force-dynamic';
+
+
+
 export default function SearchPage() {
   const searchParams = useSearchParams();
   const query = searchParams.get("q") || "";
