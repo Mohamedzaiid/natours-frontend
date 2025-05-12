@@ -1,8 +1,5 @@
 'use client';
 
-
-  const BASE_URL = 'https://natours-yslc.onrender.com';
-
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/app/providers/AuthProvider';
@@ -43,6 +40,8 @@ import {
     url.searchParams.set('tab', tab);
     window.history.pushState({}, '', url);
   };
+
+  const BASE_URL = 'https://natours-yslc.onrender.com';
 
 export default function AccountPage() {
   const { user, isAuthenticated, loading, logout } = useAuth();
